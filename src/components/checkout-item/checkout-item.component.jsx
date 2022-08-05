@@ -10,17 +10,17 @@ import {
   Arrow,
   Value,
   RemoveButton,
-} from './checkout-item.styles'
+} from './checkout-item.styles';
 
 const CheckoutItem = ({ cartItem }) => {
-  const { name, imageUrl, price, quantity } = cartItem
+  const { name, imageUrl, price, quantity } = cartItem;
 
   const { clearItemFromCart, addItemToCart, removeItemToCart } =
-    useContext(CartContext)
+    useContext(CartContext);
 
-  const clearItemHandler = () => clearItemFromCart(cartItem)
-  const addItemHandler = () => addItemToCart(cartItem)
-  const removeItemHandler = () => removeItemToCart(cartItem)
+  const clearItemHandler = () => clearItemFromCart(cartItem);
+  const addItemHandler = () => addItemToCart(cartItem);
+  const removeItemHandler = () => removeItemToCart(cartItem);
 
   return (
     <CheckoutItemContainer>
@@ -36,7 +36,7 @@ const CheckoutItem = ({ cartItem }) => {
       <BaseSpan> {price}</BaseSpan>
       <RemoveButton onClick={clearItemHandler}>&#10005;</RemoveButton>
     </CheckoutItemContainer>
-  )
-}
+  );
+};
 
-export default CheckoutItem
+export default CheckoutItem;
